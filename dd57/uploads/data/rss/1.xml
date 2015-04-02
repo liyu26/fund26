@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>栏目名称1</title>
+<link>http://127.0.0.1/dd57/uploads/a/lanmumingchen1/</link>
+<description>栏目名称1</description>
+<language>zh-cn</language>
+<generator><![CDATA[Copyright &amp;copy; 2002-2011 DEDECMS. 织梦科技 版权所有 &lt;a href=http://www.dedecms.com target='_blank'&gt;Power by DedeCms&lt;/a&gt;]]></generator>
+<webmaster>desdev@vip.qq.com</webmaster>
+<item>
+    <title><![CDATA[数据库问题]]></title>
+    <link>http://127.0.0.1/dd57/uploads/a/lanmumingchen1/2015/0320/1.html</link>
+    <description><![CDATA[关于试题（编号：28860）的疑问集中解答贴 By master at 2015-03-19 13 阅读 2 回复 0.0 希赛币 试题： 系统中有三个事务T1、T2、T3分别对数据R1和R2进行操作，其中R1和R2的初值R1=120、R2=50。假设]]></description>
+    <pubDate>2015-03-20</pubDate>
+    <category>栏目名称1</category>
+    <author>admin</author>
+    <comments>未知</comments>
+</item>
+
+</channel>
+</rss>

@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>hh_我的网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/dd57/uploads/templets/abc/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/dd57/uploads/templets/abc/style/picture.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/dd57/uploads/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	var taget_obj = document.getElementById('_ajax_feedback');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dd57/uploads/member/ajax_feedback.php");
+	DedeXHTTP = null;
+}
+function checkSubmit(){
+	if(document.feedback.msg.value!='') document.feedback.submit();
+	else alert("评论内容不能为空！");
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dd57/uploads/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dd57/uploads/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dd57/uploads/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+
+
+  var shortname = ".html";
+  var npage = 1;
+	var totalpage = 1;
+	var namehand = '14';
+	var displaytype = 'st';
+	var gtimer = null;
+	//大图
+	function dPlayBig()
+	{
+		var imgObj = document.getElementById("bigimg");
+		window.open(imgObj.src);
+	}
+	//停止幻灯
+	function dStopPlay()
+	{
+		if(gtimer) clearTimeout(gtimer);
+		else dPlayNext();
+	}
+	//开始幻灯
+	function dStartPlay()
+	{
+		if(npage!=totalpage) {
+			gtimer = setTimeout("dPlayNext()",10000);
+		}
+	}
+
+	//上一张
+	function dPlayPre(){
+
+	if(npage<2)
+	{
+			alert("这是第一页");
+	}
+	else
+	{
+			if(npage==2) {
+				if(namehand!='') location.href = namehand+shortname;
+				else location.href = "view.php?aid=14";
+			} else if(displaytype=='st' && namehand!='') {
+				location.href = namehand+"_"+(npage-1)+shortname;
+			} else {
+				location.href = "view.php?aid=14&pageno="+(npage-1);
+			}
+		}
+	}
+
+	//下一张
+	function dPlayNext()
+	{
+		if(npage==totalpage) { alert("没有了哦"); }
+		else
+		{
+			if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+shortname;
+			else location.href = "view.php?aid=14&pageno="+(npage+1);
+		}
+	}
+-->
+</script>
+</head>
+<body class="picboxview">
+
+无法在这个位置找到： head2.htm
+<!-- /header -->
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> <a href='http://127.0.0.1/dd57/uploads'>主页</a> > <a href='/dd57/uploads/a/jijinhui/'>基金会</a> > <a href='/dd57/uploads/a/jijinhui/huandengpian/'>幻灯片</a> > 
+		</div><!-- /place -->
+		<div class="viewbox">
+			<div class="title">
+				<h2>hh</h2>
+			</div><!-- /title -->
+			<div class="info">
+				<small>时间:</small>2015-03-24 21:14<small>来源:</small>未知 <small>作者:</small>admin <small>点击:</small><script src="/dd57/uploads/plus/count.php?view=yes&aid=14&mid=1" type='text/javascript' language="javascript"></script>次
+			</div><!-- /info -->
+			<div class="picbox">
+
+             
+             <!-- 如果使用的是多页单图模式(幻灯)，把href里的链接改为 javascript:dPlayNext(); 表示点击看下一页 -->
+             
+                
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211503.jpg' >
+                  <img src='/dd57/uploads/uploads/allimg/150324/1-150324211503.jpg' id='bigimg'  alt='' border='0' />
+                </a>
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211503.jpg' >
+                	hh
+                </a>
+                
+             
+                
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211504.jpg' >
+                  <img src='/dd57/uploads/uploads/allimg/150324/1-150324211504.jpg' id='bigimg'  alt='' border='0' />
+                </a>
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211504.jpg' >
+                	hh
+                </a>
+                
+             
+                
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211607.jpg' >
+                  <img src='/dd57/uploads/uploads/allimg/150324/1-150324211607.jpg' id='bigimg'  alt='' border='0' />
+                </a>
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211607.jpg' >
+                	hh
+                </a>
+                
+             
+                
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211607-50.jpg' >
+                  <img src='/dd57/uploads/uploads/allimg/150324/1-150324211607-50.jpg' id='bigimg'  alt='' border='0' />
+                </a>
+                <a href='/dd57/uploads/uploads/allimg/150324/1-150324211607-50.jpg' >
+                	hh
+                </a>
+                
+             
+
+             
+			</div>
+           	<div class="intro"><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top; display:block"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentmidpicad&charset=gbk"></script></div>
+            <div style="clear:both"></div>
+            </div>
+			<div class="newdigg" id="newdigg">
+				<div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',14)">
+					<div class="digg_act">顶一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+				<div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',14)">
+					<div class="digg_act">踩一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+			</div>
+			 <script language="javascript" type="text/javascript">getDigg(14);</script>
+
+			<div class="boxoff">
+				<strong>------分隔线----------------------------</strong>
+			</div>
+			<div class="handle">
+				<div class="context">
+					<ul>
+						<li>上一篇：<a href='/dd57/uploads/a/jijinhui/huandengpian/2015/0324/13.html'>hh</a> </li>
+						<li>下一篇：没有了 </li>
+					</ul>
+				</div><!-- /context -->
+				<div class="actbox">
+					<ul>
+						<li id="act-fav"><a href="/dd57/uploads/plus/stow.php?aid=14" target="_blank">收藏</a></li>
+						<li id="act-err"><a href="/dd57/uploads/plus/erraddsave.php?aid=14&title=hh" target="_blank">挑错</a></li>
+						<li id="act-pus"><a href="/dd57/uploads/plus/recommend.php?aid=14" target="_blank">推荐</a></li>
+						<li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+					</ul>
+				</div><!-- /actbox -->
+			</div><!-- /handle -->
+		</div><!-- /viewbox -->
+
+<!-- //AJAX评论区 -->
+无法在这个位置找到： ajaxfeedback.htm
+
+	</div><!-- /pleft -->
+
+	<div class="pright">
+	    <div class="infos_userinfo">
+ 			
+   	 	</div>
+
+    	<div class="mt1">
+			<dl class="tbox">
+				<dt><strong>热点图集</strong></dt>
+				<dd>
+					<ul class="e3">
+                    
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+        <div id="contentRtPicAD" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad&charset=gbk"></script></div>
+		<div class="mt1">
+			<dl class="tbox">
+				<dt><strong>推荐图集</strong></dt>
+				<dd>
+					<ul class="e9">
+                    
+					</ul>
+				</dd>
+			</dl>
+		</div>
+      <div id="contentRtPicAD2" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad2&charset=gbk"></script></div>
+
+	</div><!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=innerfooterad2&charset=gbk"></script></div>
+﻿<div style="display: block;" id="divMasterPageFooter">
+    <span style="position:relative">
+        <div style="Z-INDEX: 2;POSITION: absolute;left:285px;top:-112px;width=539px;height=60px;">
+            <div id="mynetdivd2-275532874-2a19" style="width:539px">
+                <div style="display: inline;" id="mynetcndelayd2-275532874-2a19">
+                    <div style="width:100%;display:table;height:60px;">
+                        <div class="mynetAspect_SavedCss_1001" style="min-height:60px">
+                            <div id="divCascading_d2-275532874-2a19" style="margin:0px 0px;height:100%;">
+                                <div class="fixspan">
+                                    <p style="margin-top:0;margin-top:0">
+                                        <span style="font-family: 微软雅黑;" face="微软雅黑">
+                                            版权所有&nbsp; 北京环球时报公益基金会&nbsp;&nbsp; 京ICP备12548765号&nbsp; 电话：010-65369542
+                                            <br>
+                                            地址：北京市朝阳区金台西路2号&nbsp; 邮编：100026&nbsp; 技术支持：
+                                            <a href="http://jianzhan.www.net.cn/static/product_mynet.html" target="_blank"
+                                            tmphref="http://jianzhan.www.net.cn/static/product_mynet.html">
+                                                中国万网
+                                            </a>
+                                            &nbsp;
+                                            <a href="http://jianzhan.www.net.cn/static/product_mynet.html" target="_blank"
+                                            tmphref="http://jianzhan.www.net.cn/static/product_mynet.html" border="0">
+                                                <img src="http://www.gtfoundation.cn/_m_gw_yqnvZxsIrrq9KAC-7TKGEIXcztts5t6X1fI6qZ5v_ikz0aWfGX2d1Zl97HX6t726OKRowE4zDTXpvcleJ3t5pU2nxAWiY4CK9XnU2SRLq03nQfBdtENcSgjbiEvhEmlS.png"
+                                                border="0" valign="middle" alt="">
+                                            </a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+<!-- /footer -->
+
+</body>
+</html>

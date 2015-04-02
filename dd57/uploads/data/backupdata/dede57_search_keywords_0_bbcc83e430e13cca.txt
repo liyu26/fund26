@@ -1,0 +1,4 @@
+INSERT INTO `dede57_search_keywords` VALUES('1','magnet:?xt=urn:btih:654837d4f5','magnet:?xt=urn:btih:654837d4f50 654837d4f50 btih m','1','0','1427199576','0','0');
+INSERT INTO `dede57_search_keywords` VALUES('2','magnet:?xt=urn:btih:654837d4f5','magnet:?xt=urn:btih:654837d4f50 654837d4f50 btih m','1','0','1427199586','0','0');
+INSERT INTO `dede57_search_keywords` VALUES('3','aa','aa','5','0','1427202762','0','0');
+INSERT INTO `dede57_search_keywords` VALUES('4','aaaa','aaaa','5','0','1427202738','0','0');

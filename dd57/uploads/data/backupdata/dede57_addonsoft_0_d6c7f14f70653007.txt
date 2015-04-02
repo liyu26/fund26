@@ -1,0 +1,2 @@
+INSERT INTO `dede57_addonsoft` VALUES('6','5','.exe','简体中文','国产软件','共享软件','Win2003,WinXP,Win2000,Win9X','3','http://','http://','1.04 MB','{dede:link islocal=\'1\' text=\'本地下载\'} /dd57/uploads/uploads/soft/150323/1-150323153340.doc {/dede:link}\r\n','','0','0','','127.0.0.1','');
+INSERT INTO `dede57_addonsoft` VALUES('7','5','.exe','简体中文','国产软件','共享软件','Win2003,WinXP,Win2000,Win9X','3','http://','http://','1.04 MB','{dede:link islocal=\'1\' text=\'本地下载\'} /dd57/uploads/uploads/soft/150323/1-150323153340.doc {/dede:link}\r\n','','0','0','','127.0.0.1','');

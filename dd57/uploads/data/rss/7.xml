@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>公益项目</title>
+<link>http://127.0.0.1/dd57/uploads/a/jijinhui/gongyixiangmu/</link>
+<description>基金会 / 公益项目</description>
+<language>zh-cn</language>
+<generator><![CDATA[Copyright &amp;copy; 2002-2011 DEDECMS. 织梦科技 版权所有 &lt;a href=http://www.dedecms.com target='_blank'&gt;Power by DedeCms&lt;/a&gt;]]></generator>
+<webmaster>desdev@vip.qq.com</webmaster>
+<item>
+    <title><![CDATA[主要模板文件与功能说明]]></title>
+    <link>http://127.0.0.1/dd57/uploads/a/jijinhui/gongyixiangmu/2015/0323/4.html</link>
+    <description><![CDATA[DedeCMS系统的模板是非固定的，用户可以在新建栏目时可以自行选择栏目模板，官方仅提供最基本的默认模板，即是内置系统模型的各个模板，由于DedeCMS支持自定义频道模型，用户自定]]></description>
+    <pubDate>2015-03-23</pubDate>
+    <category>公益项目</category>
+    <author>admin</author>
+    <comments>未知</comments>
+</item>
+
+</channel>
+</rss>
